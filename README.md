@@ -1,10 +1,19 @@
 ## GCP Simplicity Demo - Cloud Run
 
+Build,Deploy,CI/CD as simple as can be
+
+## Init config env vars
 ```bash
-gcloud builds submit  --pack image=gcr.io/${PROJECT-ID}/simple-cloud-run
+PROJECT_ID=`gcloud config get-value project`
 ```
 
+## Build your code with Cloud Build (Use buildpakcs, no need for Dockerfile)
 ```bash
-gcloud run deploy --image gcr.io/chetz-playground/simple-cloud-run
+gcloud builds submit  --pack image=gcr.io/${PROJECT_ID}/simple-cloud-run
+```
+
+## Deploy on Cloud Run
+```bash
+gcloud run deploy --image gcr.io/${PROJECT_ID}/simple-cloud-run
 ```
 
