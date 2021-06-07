@@ -17,3 +17,7 @@ gcloud builds submit  --pack image=gcr.io/${PROJECT_ID}/simple-cloud-run
 gcloud run deploy --image gcr.io/${PROJECT_ID}/simple-cloud-run
 ```
 
+## If you are OK with using beta, it's even simpler
+```
+gcloud beta run deploy simple-cloud-run --source .
+```
