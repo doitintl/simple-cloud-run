@@ -1,5 +1,4 @@
-
-// Sample run-helloworld is a minimal Cloud Run service.
+// Sample simple-run is a minimal Cloud Run service.
 package main
 
 import (
